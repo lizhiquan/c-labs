@@ -1,0 +1,7 @@
+a12345678 homer SIMPSON 25 # pass
+a99999999 JOHN doe 100 # pass
+A99999999 john DOE 100 # FAIL id
+haha john doe 100 # FAIL id
+a01234567 toolongtoolongtoolongtoolong 123gcc 12 # FAIL first name
+a12345678 homer simPSON12345678901234567890toolong 12 # FAIL last name
+a12345678 homer simpson 120 # FAIL score
