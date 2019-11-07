@@ -39,11 +39,9 @@ void list_clear(record_list *plist) {
 }
 
 int list_insert(record_list *plist, const record *prec) {
-    record *temp;
-    
     /* Allocated memory is used up */
     if (plist->nused == plist->nalloc) {
-        temp = realloc(plist->data, plist->nalloc + BLOCK);
+        record *temp = realloc(plist->data, (plist->nalloc + BLOCK) * sizeof(record));
         
         /* Fail to allocate more space */
         if (temp == 0)
